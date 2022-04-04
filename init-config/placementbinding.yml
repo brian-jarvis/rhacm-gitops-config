@@ -1,0 +1,14 @@
+---
+apiVersion: policy.open-cluster-management.io/v1
+kind: PlacementBinding
+metadata:
+  name: binding-install-argocd
+  namespace: wookie-policies
+placementRef:
+  apiGroup: apps.open-cluster-management.io
+  kind: PlacementRule
+  name: placement-install-argocd
+subjects:
+  - apiGroup: policy.open-cluster-management.io
+    kind: Policy
+    name: install-argocd
