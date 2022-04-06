@@ -8,6 +8,7 @@ spec:
   policy-templates:
     - objectDefinition:
         apiVersion: policy.open-cluster-management.io/v1
+        kind: ConfigurationPolicy
         metadata:
           name: ldap-ca
         spec:
