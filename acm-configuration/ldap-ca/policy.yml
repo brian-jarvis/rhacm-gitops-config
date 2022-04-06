@@ -36,8 +36,9 @@ spec:
                 data:
                   ca.crt: |
                     Test crt
+                  ca-hub.crt: |
+                    {{hub fromConfigMap "wookie-policies" "ldap-ca-config" "ca.crt" | autoindent  hub}}
                     
-            # {{hub fromConfigMap "wookie-policies" "ldap-ca-config" "ca.crt" hub}}
             # - complianceType: musthave
             #   objectDefinition:
             #     apiVersion: config.openshift.io/v1
