@@ -6,3 +6,9 @@ resources:
 - ldap-ca/
 
 namespace: wookie-policies
+
+
+
+commonAnnotations:
+  argocd.argoproj.io/compare-options: IgnoreExtraneous
+
