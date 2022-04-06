@@ -31,7 +31,7 @@ spec:
                 apiVersion: v1
                 kind: ConfigMap
                 metadata:
-                  name: ACM-ldap-ca-config
+                  name: acm-ldap-ca-config
                   namespace: openshift-config
                 data:
                   ca.crt: |
