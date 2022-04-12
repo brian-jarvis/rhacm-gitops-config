@@ -1,0 +1,14 @@
+
+
+apiVersion: policy.open-cluster-management.io/v1
+kind: PolicyGenerator
+metadata:
+  name: gen-policy-generator
+policyDefaults:
+  namespace: wookie-policies
+  remediationAction: enforce
+policies:
+  - name: gen-policy
+    manifests:
+      - path: namespace.yml
+
