@@ -2,4 +2,4 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: git-generated-policy
+  name: git-generated-policy-holder
