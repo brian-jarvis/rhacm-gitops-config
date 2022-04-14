@@ -11,4 +11,6 @@ policies:
   - name: dynatrace-operator
     manifests:
       - path: subscription.yml
+      - path: api-secret.yml
+      - path: dynakube.yml
 
