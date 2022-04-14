@@ -132,7 +132,7 @@ spec:
 
     # Amount of replicas of ActiveGate pods
     #
-    # replicas: 1
+    replicas: 2
 
     # Optional: tolerations to include with the ActiveGate StatefulSet.
     # See more here: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
