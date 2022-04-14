@@ -4,6 +4,8 @@ kind: DynaKube
 metadata:
   name: bry-tamlab
   namespace: dynatrace
+  labels: 
+    force-sync: yes
   annotations:
     alpha.operator.dynatrace.com/feature-automatic-kubernetes-api-monitoring: "true"
 spec:
