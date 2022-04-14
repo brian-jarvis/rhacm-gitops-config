@@ -13,4 +13,5 @@ policies:
       - path: subscription.yml
       - path: api-secret.yml
       - path: dynakube.yml
+      - path: namespace.yml
 
