@@ -5,6 +5,8 @@ resources:
 - chewie/
 - ldap-ca/
 - gen-policy/
+- dynatrace/
+
 namespace: wookie-policies
 
 

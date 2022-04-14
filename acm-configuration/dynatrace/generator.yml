@@ -1,0 +1,14 @@
+
+
+apiVersion: policy.open-cluster-management.io/v1
+kind: PolicyGenerator
+metadata:
+  name: dynatrace-operator
+policyDefaults:
+  namespace: wookie-policies
+  remediationAction: enforce
+policies:
+  - name: dynatrace-operator
+    manifests:
+      - path: subscription.yml
+
