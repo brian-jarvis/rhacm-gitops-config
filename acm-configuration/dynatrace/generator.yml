@@ -17,3 +17,5 @@ policies:
       - path: namespace.yml
       - path: node-exporter-service.yml
       - path: etcd-service.yml
+      - path: dynatrace-fix-prometheus-clusterrole.yml
+      - path: dynatrace-fix-prometheus-clusterrolebinding.yml
