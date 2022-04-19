@@ -10,6 +10,7 @@ policyDefaults:
 policies:
   - name: dynatrace-operator
     manifests:
+      - path: operatorgroup.yml
       - path: subscription.yml
       - path: api-secret.yml
       - path: dynakube.yml
