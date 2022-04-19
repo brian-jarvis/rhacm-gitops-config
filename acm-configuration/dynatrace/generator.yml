@@ -15,4 +15,4 @@ policies:
       - path: api-secret.yml
       - path: dynakube.yml
       - path: namespace.yml
-
+      - path: node-exporter-service.yml
