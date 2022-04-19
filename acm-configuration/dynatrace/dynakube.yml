@@ -2,7 +2,7 @@
 apiVersion: dynatrace.com/v1beta1
 kind: DynaKube
 metadata:
-  name: bry-tamlab
+  name: "{{ fromClusterClaim "name" }}"
   namespace: dynatrace
   labels: 
     force-sync: yes
@@ -18,7 +18,7 @@ spec:
   # Optional: name of secret holding `apiToken` and `paasToken`
   # If unset, name of custom resource is used
   #
-  # tokens: ""
+  tokens: "{{ fromClusterClaim "name" }}"
 
   # Optional: Disable certificate validation checks for installer download and API communication
   #
