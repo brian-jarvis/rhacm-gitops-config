@@ -16,3 +16,4 @@ policies:
       - path: dynakube.yml
       - path: namespace.yml
       - path: node-exporter-service.yml
+      - path: etcd-service.yml
