@@ -11,7 +11,7 @@ policyDefaults:
     placementRuleName: "hub-only"
 
 policies:
-  - name: gen-policy
+  - name: noodles-policy
     remediationAction: enforce
     manifests:
       - path: namespace.yml

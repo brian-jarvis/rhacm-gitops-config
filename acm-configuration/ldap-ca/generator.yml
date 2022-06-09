@@ -3,7 +3,7 @@
 apiVersion: policy.open-cluster-management.io/v1
 kind: PolicyGenerator
 metadata:
-  name: gen-policy-generator
+  name: amc-policy-generator
 policyDefaults:
   namespace: wookie-policies
   remediationAction: enforce
@@ -11,8 +11,8 @@ policyDefaults:
     placementRuleName: "hub-only"
 
 policies:
-  - name: gen-policy
+  - name: ldap-ca-policy
     remediationAction: enforce
     manifests:
-      - path: namespace.yml
+      - path: acm-ldap-ca-config.yml
 
