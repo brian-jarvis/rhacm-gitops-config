@@ -3,7 +3,6 @@ apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
   name: hub-only
-  namespace: wookie-policies
 spec:
   clusterConditions:
   - status: 'True'

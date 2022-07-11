@@ -15,4 +15,5 @@ policies:
     remediationAction: enforce
     manifests:
       - path: namespace.yml
+      - path: templates.yml
 

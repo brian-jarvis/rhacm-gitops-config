@@ -1,15 +1,14 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-resources:
-- acm-placements/
-- hub-config/
+bases:
+# - acm-placements/
+# - hub-config/
 - chewie/
-- ldap-ca/
+# - ldap-ca/
 - gen-policy/
 # - dynatrace/
 
-namespace: wookie-policies
-
+# namespace: wookie-policies
 
 
 commonAnnotations:
