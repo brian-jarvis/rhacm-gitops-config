@@ -7,7 +7,7 @@ metadata:
   annotations:
     portworx.io/is-openshift: 'true'
     set.name: '{{- if eq (fromClusterClaim "name") "local-cluster" -}} ocp103 {{- else -}} fromClusterClaim {{- end -}}'
-    set.name.full: 'px-cluster- {{- if eq (fromClusterClaim "name") "local-cluster" -}} ocp103 {{- else -}} {{ fromClusterClaim "name" }} {{- end -}}'
+    set.name.full: '{{- if eq (fromClusterClaim "name") "local-cluster" -}} ocp103 {{- else -}} {{ fromClusterClaim "name" }} {{- end -}}'
 spec:
   csi:
     enabled: true
