@@ -1,7 +1,8 @@
 kind: StorageCluster
 apiVersion: core.libopenstorage.org/v1
 metadata:
-  name: px-cluster- {{ fromClusterClaim "datacenter" }} - {{- if eq (fromClusterClaim "name") "local-cluster" -}} ocp103 {{- else -}} fromClusterClaim {{- end -}}
+  # name: px-cluster- {{ fromClusterClaim "datacenter" }} - {{- if eq (fromClusterClaim "name") "local-cluster" -}} ocp103 {{- else -}} fromClusterClaim {{- end -}}
+  name: px-cluster-{{- if eq (fromClusterClaim "name") "local-cluster" -}} ocp103 {{- else -}} fromClusterClaim {{- end -}}
   namespace: portworx
   annotations:
     portworx.io/is-openshift: 'true'
