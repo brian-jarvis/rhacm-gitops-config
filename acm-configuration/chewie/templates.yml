@@ -9,7 +9,7 @@ metadata:
     portworx.io/is-openshift: 'true'
     
   labels: 
-    smbc-app: 'px-cluster- {{- fromClusterClaim "datacenter" -}} - {{- if eq (fromClusterClaim "name") "local-cluster" -}} ocp103- {{- fromClusterClaim "name" }} {{- else -}} {{ fromClusterClaim "name" }} {{- end -}}'
+    smbc-app: '{{ "px-cluster-" }} {{- fromClusterClaim "datacenter" -}} - {{- if eq (fromClusterClaim "name") "local-cluster" -}} ocp103- {{- fromClusterClaim "name" }} {{- else -}} {{ fromClusterClaim "name" }} {{- end -}}'
 spec:
   csi:
     enabled: true
