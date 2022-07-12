@@ -7,7 +7,9 @@ metadata:
   namespace: portworx
   annotations:
     portworx.io/is-openshift: 'true'
-    # set.name.full: 'px-cluster- {{- fromClusterClaim "datacenter" -}} - {{- if eq (fromClusterClaim "name") "local-cluster" -}} ocp103- {{- fromClusterClaim "name" }} {{- else -}} {{ fromClusterClaim "name" }} {{- end -}}'
+    
+  labels: 
+    smbc-app: 'px-cluster- {{- fromClusterClaim "datacenter" -}} - {{- if eq (fromClusterClaim "name") "local-cluster" -}} ocp103- {{- fromClusterClaim "name" }} {{- else -}} {{ fromClusterClaim "name" }} {{- end -}}'
 spec:
   csi:
     enabled: true
