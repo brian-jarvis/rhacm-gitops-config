@@ -11,6 +11,7 @@ metadata:
   labels: 
     smbc-app: '{{ "px-cluster-" }} {{- fromClusterClaim "datacenter" -}} - {{- if eq (fromClusterClaim "name") "local-cluster" -}} ocp103- {{- fromClusterClaim "name" }} {{- else -}} {{ fromClusterClaim "name" }} {{- end -}}'
     break-acm: 'px-cluster-{{ fromClusterClaim "datacenter" }}-{{ if eq (fromClusterClaim "name") "local-cluster" }}ocp103-{{ fromClusterClaim "name" }} {{ else }} {{ fromClusterClaim "name" }} {{ end }}'
+    delim-app: 'px-cluster- {{- fromClusterClaim "datacenter" -}} - {{- if eq (fromClusterClaim "name") "local-cluster" -}} ocp103- {{- fromClusterClaim "name" }} {{- else -}} {{ fromClusterClaim "name" }} {{- end }}'
 spec:
   csi:
     enabled: true
