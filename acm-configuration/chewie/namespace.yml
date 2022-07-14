@@ -7,4 +7,4 @@ metadata:
   name: noodles
   labels:
     smbc-app: '{{ $clusterFullName:= "vst.bry.tamlab.rdu2.redhat.com" }}{{ $clusterFullName }}'
-    smbc-name: '{{ $clusterFullName:= "vst.bry.tamlab.rdu2.redhat.com" }}{{ $clusterFullName | slice 1 2 }}'
+    smbc-name: '{{ $clusterFullName:= "vst.bry.tamlab.rdu2.redhat.com" }}{{ slice clusterFullName 1 2 }}'
