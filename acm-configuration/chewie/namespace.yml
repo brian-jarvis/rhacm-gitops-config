@@ -1,9 +1,9 @@
 ---
 
-'{{ $clusterFullName:= "vst.bry.tamlab.rdu2.redhat.com" }}'
+
 apiVersion: v1
 kind: Namespace
 metadata:
   name: noodles
   labels:
-    smbc-app: '{{ $clusterFullName }}'
+    smbc-app: '{{ $clusterFullName:= "vst.bry.tamlab.rdu2.redhat.com" }}{{ $clusterFullName }}'
