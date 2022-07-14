@@ -8,3 +8,4 @@ metadata:
   labels:
     smbc-app: '{{ $clusterFullName:= "vst.bry.tamlab.rdu2.redhat.com" }}{{ $clusterFullName }}'
     smbc-name: '{{ $clusterFullName:= "vst.bry.tamlab.rdu2.redhat.com" }}{{ slice $clusterFullName 0 2 }}'
+    smbc-until: '{{ range $i, $e := until 5 }}{{ $i }}{{ end }}'
