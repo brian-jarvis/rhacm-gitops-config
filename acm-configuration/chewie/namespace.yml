@@ -4,4 +4,4 @@ kind: Namespace
 metadata:
   name: noodles
   labels:
-    smbc-app: '{{ index ("vst.bry.tamlab.rdu2.redhat.com" | strings.Split ".") 0 }}'
+    smbc-app: '{{ index ("vst.bry.tamlab.rdu2.redhat.com" | split ".") 0 }}'
