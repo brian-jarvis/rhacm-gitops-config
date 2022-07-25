@@ -3,8 +3,5 @@ kind: Kustomization
 
 generators:
   - generator.yml
-
-resources:
-  - ../acm-placements
   
 namespace: wookie-policies
