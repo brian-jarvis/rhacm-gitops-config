@@ -7,6 +7,7 @@ bases:
 # - ldap-ca/
 - gen-policy/
 # - dynatrace/
+- acs-init/
 
 # namespace: wookie-policies
 

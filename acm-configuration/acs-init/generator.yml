@@ -1,0 +1,22 @@
+
+
+apiVersion: policy.open-cluster-management.io/v1
+kind: PolicyGenerator
+metadata:
+  name: gen-policy-generator
+policyDefaults:
+  namespace: wookie-policies
+  remediationAction: enforce
+  placement:
+    placementRuleName: "hub-only"
+
+policies:
+  - name: acs-initbundle-policy
+    remediationAction: enforce
+    manifests:
+      - path: namespace.yml
+      - path: serviceaccount.yml
+      - path: role.yml
+      - path: rolebinding.yml
+      - path: job.yml
+
