@@ -1,4 +1,12 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: stackrox-smbc
+  name: stackrox
+  annotations:
+    openshift.io/node-selector: ''
+
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: rhacs-operator

@@ -7,16 +7,45 @@ metadata:
 policyDefaults:
   namespace: wookie-policies
   remediationAction: enforce
-  placement:
-    placementRuleName: "hub-only"
-
+  placementBindingDefaults:
+    name: binding-acs-operator
+  policySets:
+    - acs-operator
 policies:
-  - name: acs-initbundle-policy
+  - name: acs-central
     remediationAction: enforce
     manifests:
       - path: namespace.yml
+      - path: subscription.yml
+      - path: operatorgroup.yml
+      - path: central.yml
       - path: serviceaccount.yml
       - path: role.yml
       - path: rolebinding.yml
       - path: job.yml
+      - path: central-init-bundle-certs.yml
 
+  - name: acs-sensor
+    remediationAction: enforce
+    manifests:
+      - path: namespace.yml
+      - path: subscription.yml
+      - path: operatorgroup.yml
+      - path: securecluster.yml
+
+  - name: acs-central-status
+    remediationAction: inform
+    manifests:
+      - path: central-status.yml
+
+  - name: acs-sensor-status
+    remediationAction: inform
+    manifests:
+      - path: sensor-status.yml
+
+
+policySets:
+  - description: 
+    name: acs-operator
+    placement:
+      placementRuleName: "hub-only"
