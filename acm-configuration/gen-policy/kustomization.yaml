@@ -5,3 +5,7 @@ generators:
   - generator.yml
 
 
+resources:
+  - ../acm-placements
+
+namespace: chewie-policies

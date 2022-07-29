@@ -31,7 +31,7 @@ policies:
       - path: namespace.yml
       - path: subscription.yml
       - path: operatorgroup.yml
-      - path: securecluster.yml
+      - path: securedcluster.yml
 
   - name: acs-central-status
     remediationAction: inform

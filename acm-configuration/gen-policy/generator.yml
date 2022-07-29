@@ -5,10 +5,10 @@ kind: PolicyGenerator
 metadata:
   name: gen-policy-generator
 policyDefaults:
-  namespace: wookie-policies
+  namespace: chewie-policies
   remediationAction: enforce
   placement:
-    placementRuleName: "hub-only"
+    placementRuleName: "hub-only-chewie"
 
 policies:
   - name: gen-policy
