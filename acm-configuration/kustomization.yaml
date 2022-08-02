@@ -8,6 +8,7 @@ bases:
 - gen-policy/
 # - dynatrace/
 - acs-init/
+- gitops-cleaner
 
 # namespace: wookie-policies
 

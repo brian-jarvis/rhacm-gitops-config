@@ -1,0 +1,28 @@
+
+
+apiVersion: policy.open-cluster-management.io/v1
+kind: PolicyGenerator
+metadata:
+  name: gen-policy-generator
+placementBindingDefaults:
+    name: binding-gitops-operator
+policyDefaults:
+  namespace: wookie-policies
+  remediationAction: enforce
+  placement:
+    placementRuleName: "hub-only"
+  policySets:
+    - gitops-operator
+policies:
+  - name: gitops-cleaner
+    remediationAction: enforce
+    manifests:
+      - path: namespace.yml
+      - path: argocd.yml
+
+
+policySets:
+  - description: 
+    name: gitops-operator
+    placement:
+      placementRuleName: "hub-only"
