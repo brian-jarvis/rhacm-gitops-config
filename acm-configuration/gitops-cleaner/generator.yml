@@ -19,7 +19,7 @@ policies:
     manifests:
       - path: namespace.yml
       - path: argocd.yml
-    complianceType: mustonlyhave
+    complianceType: mustnothave
 
 
 policySets:
