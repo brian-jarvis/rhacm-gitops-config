@@ -59,8 +59,6 @@ spec:
         cpu: 250m
         memory: 256Mi
   helpChatURL: 'https://coreos.slack.com/archives/CMP95ST2N'
-  dex:
-    $patch: delete
   sso:
     dex:
       openShiftOAuth: true
