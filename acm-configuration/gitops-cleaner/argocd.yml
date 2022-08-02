@@ -7,6 +7,9 @@ spec:
   nodePlacement:
     nodeSelector:
       node-role.kubernetes.io/infra-internal: ""
+    tolerations: 
+    - key: node-role.kubernetes.io/infra
+      operator: exists
   server:
     autoscale:
       enabled: false
