@@ -4,6 +4,9 @@ metadata:
   name: argocd-cleaner
   namespace: clean-gitops
 spec:
+  nodePlacement:
+    nodeSelector:
+      node-role.kubernetes.io/infra-internal: ""
   server:
     autoscale:
       enabled: false
@@ -70,7 +73,6 @@ spec:
           cpu: 250m
           memory: 128Mi
     provider: dex
-  dex: {}
   ha:
     enabled: false
     resources:
