@@ -59,17 +59,26 @@ spec:
         cpu: 250m
         memory: 256Mi
   helpChatURL: 'https://coreos.slack.com/archives/CMP95ST2N'
-  sso:
-    dex:
-      openShiftOAuth: true
-      resources:
-        limits:
-          cpu: 500m
-          memory: 256Mi
-        requests:
-          cpu: 250m
-          memory: 128Mi
-    provider: dex
+  # sso:
+  #   dex:
+  #     openShiftOAuth: true
+  #     resources:
+  #       limits:
+  #         cpu: 500m
+  #         memory: 256Mi
+  #       requests:
+  #         cpu: 250m
+  #         memory: 128Mi
+  #   provider: dex
+  dex:
+    openShiftOAuth: true
+    resources:
+      limits:
+        cpu: 500m
+        memory: 256Mi
+      requests:
+        cpu: 250m
+        memory: 128Mi
   ha:
     enabled: false
     resources:
