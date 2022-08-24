@@ -6,5 +6,6 @@ generators:
 
 resources:
   - ../acm-placements
+  - big-cm.yml
   
 namespace: wookie-policies
